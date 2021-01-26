@@ -1,0 +1,4 @@
+config.ini
+
+# Project exclude paths
+/venv/

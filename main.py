@@ -79,8 +79,8 @@ def greyscale(image):
 
 if __name__ == '__main__':
     # URL = 'https://www.bestbuy.com/site/nvidia-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-graphics-card-titanium-and-black/6429440.p?skuId=6429440'
-    URL = 'https://store.ui.com/collections/unifi-protect-cameras/products/unifi-protect-g4-pro-camera'
-    # URL = 'https://store.ui.com/collections/unifi-protect-cameras/products/unifi-protect-g3-instant-camera'
+    # URL = 'https://store.ui.com/collections/unifi-protect-cameras/products/unifi-protect-g4-pro-camera'
+    URL = 'https://store.ui.com/collections/unifi-protect-cameras/products/unifi-protect-g3-instant-camera'
     file = 'OCR.txt'
     screen(URL)
     greyscale('images/image.png')

@@ -1,5 +1,6 @@
 # Parsing Imports
 import configparser
+import requests
 
 config = configparser.ConfigParser()
 config.read('config.ini')
@@ -20,13 +21,14 @@ def parse(file,URL):
                         return('Out of stock')
                         # return("{}".format(l.strip()))
                     elif word == keywords[1] or word == keywords[3]:
-                        return('Available ' +URL)
+                        return('Available\n' +URL)
                     else:
-                        return('Keywords not found, please check page '+URL)
+                        return('Keywords not found, please check page\n'+URL)
                 else:
-                    return ('Maybe in stock. '+URL)
+                    return ('Maybe in stock.\n'+URL)
 
 def botMessage(message):
     print(message)
     botMessage = message
     sendText = 'https://api.telegram.org/bot' + botToken + '/sendMessage?chat_id=' + botChatID + '&parse_mode=Markdown&text=' + botMessage
+    requests.get(sendText)
